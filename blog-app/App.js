@@ -56,7 +56,7 @@ export default function App() {
           name="Preview"
           component={Preview}
           options={{
-            title: "Discover",
+            title: "Explore",
             headerTitleAlign: "center",
             headerTintColor: "white",
             headerStyle: {
@@ -91,6 +91,7 @@ export default function App() {
                 </View>
               );
             },
+            
             tabBarIcon: () => {
               return (
                 <AntDesign name="folderopen" size={30} color="dodgerblue" />

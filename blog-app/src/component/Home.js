@@ -12,8 +12,8 @@ const Home = ({ img, Heading, Owner, Time, User, Article }) => {
   const navigation = useNavigation()
   const [fontsloaded] = useFonts({
 
-    Poppins_Black: require("../fonts/poppins/Poppins-Bold.ttf"),
-    Poppins_Medium: require("../fonts/poppins/Poppins-Medium.ttf")
+    // Poppins_Black: require("../fonts/poppins/Poppins-Bold.ttf"),
+    // Poppins_Medium: require("../fonts/poppins/Poppins-Medium.ttf")
   })
 
   if (!fontsloaded) {
