@@ -22,8 +22,8 @@ export default class LoginScreen extends Component {
         </View>
         <View >
           <TextInput
-            placeholderTextColor="black"
-            placeholder="Username"
+            placeholderTextColor="gray"
+            placeholder="email"
             onChangeText={(email) => {
               console.log(email);
               this.setState({ email: email })
@@ -31,7 +31,7 @@ export default class LoginScreen extends Component {
             style={styles.input}
           />
           <TextInput
-            placeholderTextColor="black"
+            placeholderTextColor="gray"
             placeholder="Password"
             onChangeText={(password) => {
               console.log(password);

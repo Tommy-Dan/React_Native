@@ -1,34 +1,30 @@
 import React from 'react'
-import { FlatList, View } from 'react-native';
+import { FlatList, View, Text } from 'react-native';
 import Contact from "./conponents/Contact";
 
 
 
 const ContactsScreen = () => {
     const contacts=[
-        {name:"Francis",number:"+2488522180"},
-        {name:"Grace",number:"+2488512180"},
-        {name:"Prince",number:"+2488524180"},
-        {name:"Rama",number:"+2488352180"},
-        {name:"Alex",number:"+2488552180"},
-        {name:"Malik",number:"+2489852180"},
-        {name:"Tom",number:"0244852180"},
-        {name:"Mambu",number:"02448052181"},
-        {name:"Francis",number:"+24228852180"},
-        {name:"Grace",number:"+2488452180"},
-        {name:"Prince",number:"+2488582180"},
-        {name:"Rama",number:"+2488552180"},
-        {name:"Alex",number:"+2488527180"},
-        {name:"Malik",number:"+2488582180"},
-        {name:"Tom",number:"+2332448952180"},
-        {name:"Mambu",number:"+233244852180"},
-        {name:"Alex",number:"+24885282180"},
-        {name:"Malik",number:"+24884252180"},
-        {name:"Tom",number:"+23324481252180"},
-        {name:"Mambu",number:"+2332448252180"},
+      {name:"Francis Jah",number:"+2488522180"},
+      {name:"Grace Odonko",number:"+2488512180"},
+      {name:"Prince William",number:"+2488524180"},
+      {name:"Rama Boku",number:"+2488352180"},
+      {name:"Alex Manuu",number:"+2488552180"},
+      {name:"Tom Hilfiger",number:"0244852180"},
+      {name:"Chris Brown",number:"02448052181"},
+      {name:"Francess Addo",number:"+24228852180"},
     ]
   return (
     <View>
+         <Text style={{
+           marginLeft: 50,
+           marginBottom: 20,
+           fontSize: 25,
+           color: 'skyblue',
+           fontWeight: '700'
+         }}
+         >Contacts</Text>
        <FlatList 
        data={contacts}
        renderItem={({item})=>{

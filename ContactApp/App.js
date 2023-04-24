@@ -57,10 +57,10 @@ class App extends Component {
 
     return (
       <View style={styles.container}>
-        <Register />
+        {/* <Register /> */}
         {/* <Contact /> */}
         {/* <ContactsScreen /> */}
-       {/* <LoginScreen /> */}
+       <LoginScreen />
        {/* <PetList  /> */}
        {/* <Pet /> */}
 
