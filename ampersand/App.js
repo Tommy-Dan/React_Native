@@ -1,25 +1,17 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Home from "./src/Screens/Home";
+import { StyleSheet} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Index from "./src/Screens/Index";
-import LoginScreen from "./src/Screens/LoginScreen";
-import RegisterScreen from "./src/Screens/RegisterScreen";
-import QRGenerator from "./src/Screens/QRGenerator";
-import BQScanner from "./src/Screens/BQScanner";
-import Profile from "./src/Screens/Profile";
+import Home from "./src/screens/Home";
+import Index from "./src/screens/Index";
+import Login from "./src/screens/Login";
+import Register from "./src/screens/Register";
+import QRgenerator from "./src/screens/QRgenerator";
+import Scanner from "./src/screens/Scanner";
+import Profile from "./src/screens/Profile";
+import ShotImage from "./src/screens/ShotImage";
+import { Entypo, AntDesign, Ionicons, MaterialCommunityIcons, FontAwesome, Feather } from "@expo/vector-icons";
 
-import TakeImage from "./src/Screens/TakeImage";
 
-import {
-  Entypo,
-  AntDesign,
-  Ionicons,
-  MaterialCommunityIcons,
-  FontAwesome,
-  Feather,
-} from "@expo/vector-icons";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -27,9 +19,9 @@ export default function App() {
   return (
     <NavigationContainer styles={styles.container}>
       <Stack.Navigator
-      //  screenOptions={{
-      //      header:()=>null
-      //  }}
+       screenOptions={{
+           header:()=>null
+       }}
       >
         {/* <Stack.Screen
           name="GetStarted"
@@ -47,8 +39,8 @@ export default function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="QRGenerator"
-          component={QRGenerator}
+          name="QRgenerator"
+          component={QRgenerator}
           options={{ headerShown: false }}
         />
         <Stack.Screen
@@ -64,11 +56,10 @@ export default function App() {
             headerTitleStyle: {
               fontSize: 30,
               fontWeight: "bold",
-              //fontFamily:""
             },
           }}
-          name="LoginScreen"
-          component={LoginScreen}
+          name="Login"
+          component={Login}
         />
         <Stack.Screen
           options={{
@@ -83,11 +74,10 @@ export default function App() {
             headerTitleStyle: {
               fontSize: 30,
               fontWeight: "normal",
-              //fontFamily:""
             },
           }}
-          name="RegisterScreen"
-          component={RegisterScreen}
+          name="Register"
+          component={Register}
         />
 
         <Stack.Screen
@@ -103,11 +93,10 @@ export default function App() {
             headerTitleStyle: {
               fontSize: 30,
               fontWeight: "bold",
-              //fontFamily:""
             },
           }}
-          name="BQScanner"
-          component={BQScanner}
+          name="Scanner"
+          component={Scanner}
         />
         <Stack.Screen
           name="Profile"
@@ -126,11 +115,10 @@ export default function App() {
             headerTitleStyle: {
               fontSize: 30,
               fontWeight: "normal",
-              //fontFamily:""
             },
           }}
-          name="TakeImage"
-          component={TakeImage}
+          name="ShotImage"
+          component={ShotImage}
         />
       </Stack.Navigator>
     </NavigationContainer>

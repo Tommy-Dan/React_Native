@@ -1,8 +1,10 @@
 import React from "react";
-import Profile from "../Screens/Profile";
+import Profile from "../screens/Profile";
+
+
 
 const db = () => {
-  const dataBase = [{ name: "Nana", role: "Horrors" }];
+  const dataBase = [{ name: "Tom", role: "CTO" }];
   return (
     <View>
       <FileList

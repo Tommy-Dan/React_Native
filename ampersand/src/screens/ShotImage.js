@@ -1,15 +1,13 @@
-import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+// import { Camera, CameraType } from 'expo-camera';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
 
 
 export default function App() {
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();
   
-   // if (!permission) ... 
-  
-   // if (!permission.granted) ... 
   
     function toggleCameraType() {
       setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
@@ -41,9 +39,7 @@ export default function App() {
       borderBottomColor: "orange"
     },
     camera: {
-        flex:4,
-    //   width: 380,
-    //   height: 200,
+      flex:4,
       alignItems: "center",
       alignSelf: "center",
       justifyContent: 'center',
@@ -102,15 +98,13 @@ export default function App() {
       width:128,
       height:2,
       marginLeft:85,
-      //marginHorizontal:50,
-     //alignSelf:"center",
-     backgroundColor:"#ff1a75",
+      backgroundColor:"#ff1a75",
     },
     ForgotpasswordText:{
       textAlign:"left",
       fontSize:18,
       color:"gray",
       marginLeft:10
-    },
+    }
   });
   

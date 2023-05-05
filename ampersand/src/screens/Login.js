@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-//import { TouchableOpacity } from "react-native-gesture-handler";
 import { TextInput } from "react-native-paper";
-import imgphoto from "../Components/images/Mphoto.jpg";
+import loginImg from "../../assets/images/Mphoto.jpg";
 
-const LoginScreen = ({ navigation }) => {
+
+
+const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
-      <Image source={imgphoto} style={styles.img} />
+      <Image source={loginImg} style={styles.img} />
 
       <View style={styles.card}>
         <TextInput
           style={styles.input}
-          placeholder="Email"
+          placeholder="your email"
           value={email}
           onChangeText={(text) => setEmail(text)}
         />
@@ -44,8 +45,6 @@ const LoginScreen = ({ navigation }) => {
   );
 };
 
-export default LoginScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -58,6 +57,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
     justifyContent: "center",
+  },
+  ForgotpasswordText: {
+    marginTop: 0
   },
   ForgotpasswordTextLine: {
     width: 128,
@@ -96,5 +98,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     textAlign: "center",
-  },
+  }
 });
+
+export default Login;

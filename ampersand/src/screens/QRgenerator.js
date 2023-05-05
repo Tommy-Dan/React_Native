@@ -1,22 +1,22 @@
+import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import QRCode from "react-native-qrcode-svg";
-import React from "react";
+import QRscanner from "./Scanner";
 
-import BQScanner from "./BQScanner";
 
-const QRGenerator = ({ navigation }) => {
+
+const QRgenerator = ({ navigation }) => {
   const userInfo = {
-    fullname: "Nana Kwabena",
+    fullname: "Tommy Dan Tucker",
     email: "admin@gmail.com",
-    phone: "0244910550",
-    twitter: "@hndrxx",
-    linkedin: "/hndrxx",
+    phone: "0540000000",
+    twitter: "@example",
+    linkedin: "/example",
   };
-  //console.log(JSON.stringify(userInfo));
+
   return (
     <View>
       <View style={styles.TopContainer}>
-        {/* <Image style={styles.StarImg2}  source={require("./images/ios-arrow-round-back.png")} />  */}
         <View style={styles.StarImg2}>
           <Text style={styles.logoTest}>Profile info</Text>
         </View>
@@ -26,7 +26,7 @@ const QRGenerator = ({ navigation }) => {
           }}>
           <Image
             style={styles.StarImg1}
-            source={require("../Components/images/img200.png")}
+            source={require("../../assets/images/img200.png")}
           />
         </TouchableOpacity>
       </View>
@@ -41,7 +41,6 @@ const QRGenerator = ({ navigation }) => {
       <View style={styles.QRCode}>
         <QRCode
           value={JSON.stringify(userInfo)}
-          //style={styles.QRCode}
           size={250}
         />
       </View>
@@ -49,12 +48,12 @@ const QRGenerator = ({ navigation }) => {
         <View>
           <Image
             style={styles.Image}
-            source={require("../Components/images/profile.jpg")}
+            source={require("../../assets/images/profile.jpg")}
           />
         </View>
         <View style={styles.infoContainer}>
-          <Text style={styles.name}>Nana Kwabena</Text>
-          <Text>0244910550</Text>
+          <Text style={styles.name}>Tom</Text>
+          <Text>0540000000</Text>
         </View>
       </View>
       <View style={styles.bottomContainer}>
@@ -99,7 +98,6 @@ const styles = StyleSheet.create({
   LetstartText2: {
     width: 70,
     height: 2,
-    //marginLeft:30,
     marginHorizontal: 50,
     alignSelf: "center",
     backgroundColor: "#ff1a75",
@@ -135,12 +133,10 @@ const styles = StyleSheet.create({
     height: 100,
     marginHorizontal: 20,
     marginTop: 60,
-    // alignSelf: "",
     borderRadius: 50,
   },
   wantText: {
     marginTop: 36,
-    // marginRight:40,
     marginHorizontal: 20,
   },
   scanContainer: {
@@ -154,12 +150,9 @@ const styles = StyleSheet.create({
     borderColor: "#01796F",
   },
   infoContainer: {
-    //width:70,
     justifyContent: "center",
     marginHorizontal: 0,
-    //flexDirection:"row",
     marginTop: 70,
-    //flex:4
   },
   name: {
     fontWeight: "bold",
@@ -170,8 +163,6 @@ const styles = StyleSheet.create({
   },
   StarsTop: {
     marginHorizontal: 10,
-    //marginTop:39,
-    // marginBottom:90,
     flexDirection: "row",
     justifyContent: "space-between",
     backgroundColor: "blue",
@@ -192,10 +183,6 @@ const styles = StyleSheet.create({
   StarImg2: {
     marginTop: 2,
     fontSize: 25,
-    //width:40,
-    //height:40,
-    // borderRadius:20,
-    // backgroundColor:"white",
     alignSelf: "center",
     marginHorizontal: 10,
   },
@@ -206,9 +193,6 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     position: "relative",
     marginLeft: 60,
-    //backgroundColor:"red"
-
-    //alignItems:"flex-end",
   },
   TopContainer: {
     flexDirection: "row",
@@ -216,8 +200,6 @@ const styles = StyleSheet.create({
     height: 120,
     width: "100%",
     backgroundColor: "#01796F",
-    //justifyContent: 'space-between',
-    //alignSelf:"center",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -228,4 +210,6 @@ const styles = StyleSheet.create({
     marginLeft: 50,
   },
 });
-export default QRGenerator;
+
+
+export default QRgenerator;

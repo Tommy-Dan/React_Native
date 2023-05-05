@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sharecontactapp",
-    "slug": "sharecontactapp",
+    "name": "ampersand",
+    "slug": "ampersand",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,26 +23,8 @@
         "backgroundColor": "#ffffff"
       }
     },
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
-        }
-      ]
-    ],
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-image-picker",
-        {
-          "photosPermission": "The app accesses your photos to let you share them with your friends."
-        }
-      ]
-
-    ]
-    
+    }
   }
 }

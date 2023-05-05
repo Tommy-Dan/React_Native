@@ -1,33 +1,24 @@
 import React, { useState, useEffect } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-} from "react-native";
-//import { TouchableOpacity } from "react-native-gesture-handler";
-//import { TextInput } from "react-native-paper";
-import imgphoto from "../Components/images/user2.jpg";
+import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput, ScrollView } from "react-native";
 import * as ExpoImagePicker from "expo-image-picker";
 
-const RegisterScreen = ({ navigation }) => {
+
+const Register = ({ navigation }) => {
   const [image, setImage] = useState(null);
+
+
 
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
   const [password, setPassword] = useState("");
-  const [conpassword, setconPassword] = useState("");
+  const [confirmpassword, setconPassword] = useState("");
   const [twitter, setTwitter] = useState("");
   const [LinkedIn, setLinkedIn] = useState("");
   const handleSignUp = () => {};
 
-  const RegisterScreen = async () => {
-    // No permissions request is necessary for launching the image library
-    // const [status, requestPermission] = ExpoImagePicker.useCameraPermissions();
+
+  const Register = async () => {
     let result = await ExpoImagePicker.launchImageLibraryAsync({
       mediaTypes: ExpoImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -42,8 +33,7 @@ const RegisterScreen = ({ navigation }) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.addphotoContaianer}>
-        <TouchableOpacity onPress={RegisterScreen}>
-          {/* <Image source={imgphoto} style={styles.img}/> */}
+        <TouchableOpacity onPress={Register}>
           <Text style={styles.addphoto}>Profile Photo</Text>
           <Image source={{ uri: image }} style={styles.img} />
         </TouchableOpacity>
@@ -71,7 +61,7 @@ const RegisterScreen = ({ navigation }) => {
         <TextInput
           style={styles.input}
           placeholder="Confirm Password"
-          value={conpassword}
+          value={confirmpassword}
           onChangeText={(text) => setconPassword(text)}
           secureTextEntry
         />
@@ -101,8 +91,6 @@ const RegisterScreen = ({ navigation }) => {
   );
 };
 
-export default RegisterScreen;
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -120,13 +108,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
     justifyContent: "center",
-    //marginVertical:20,
-    // tinColor:"orange"
   },
 
   addphoto: {
     textAlign: "center",
-    // color: "#01796F",
     fontSize: 15,
 
     marginTop: 10,
@@ -166,3 +151,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default Register;
